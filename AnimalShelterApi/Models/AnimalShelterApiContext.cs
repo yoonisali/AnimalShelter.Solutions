@@ -21,8 +21,8 @@ namespace AnimalShelterApi.Models
         );
         builder.Entity<Cat>()
         .HasData(
-          new Cat { CatId = 1, Name = "Kit-Kat", Age = 4, Breed = "Savannah" },
-          new Cat { CatId = 2, Name = "Simba", Age = 10, Breed = "Singapura" }
+          new Cat { CatId = 1, Name = "Kit-Kat", Breed = "Savannah", Age = 4, },
+          new Cat { CatId = 2, Name = "Simba", Breed = "Singapura", Age = 10, }
         );
     }
   }
