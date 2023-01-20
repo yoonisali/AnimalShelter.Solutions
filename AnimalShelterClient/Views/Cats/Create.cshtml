@@ -1,0 +1,21 @@
+@{
+  ViewData["Title"] = "Add a Cat";
+}
+
+@model AnimalShelterClient.Models.Cat
+
+<h4>Add a new cat to the animal shelter!</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;"})
+  <br>
+  @Html.TextBoxFor(model => model.Breed, new { placeholder = "Breed", style = "text-align: center;"})
+  <br>
+  @Html.TextBoxFor(model => model.Age, new { placeholder = "Age", style = "text-align: center;"})
+  <br>
+  <input type="submit" value="Add" class="btn btn-primary"/>
+}
+
+<br>
+<p>@Html.ActionLink("Back to all cats", "Index")</p>

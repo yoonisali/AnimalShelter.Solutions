@@ -17,5 +17,18 @@ public class CatsController : Controller
     return View(cat);
   }
 
-  
+  public ActionResult Create()
+  {
+    return View();
+  }
+
+  [HttpPost]
+  public ActionResult Create(Cat cat)
+  {
+    Cat.PostCats(cat);
+    Thread.Sleep(600);
+    return RedirectToAction("Index");
+  }
+
+
 }
