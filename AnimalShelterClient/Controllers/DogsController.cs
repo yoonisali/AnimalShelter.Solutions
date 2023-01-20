@@ -29,4 +29,18 @@ public class DogsController : Controller
     Thread.Sleep(600);
     return RedirectToAction("Index");
   }
+
+  public ActionResult Edit(int id)
+  {
+    Dog dog = Dog.GetDogDetails(id);
+    return View(dog);
+  }
+
+  [HttpPost]
+  public ActionResult Edit(Dog dog)
+  {
+    Dog.PutDogs(dog);
+    Thread.Sleep(600);
+    return RedirectToAction("Details", new { id = dog.DogId});
+  }
 }

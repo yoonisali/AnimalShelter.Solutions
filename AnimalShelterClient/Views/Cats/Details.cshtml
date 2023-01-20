@@ -7,4 +7,7 @@
 <p>Breed: @Model.Breed</p>
 <p>Age: @Model.Age</p>
 
+
+
+<p>@Html.ActionLink("Edit details", "Edit", new { id = @Model.CatId })</p>
 @Html.ActionLink("Return to all cats", "Index")

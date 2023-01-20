@@ -40,6 +40,12 @@ namespace AnimalShelterClient.Models
       ApiHelper.PostCats(jsonCat);
     }
 
+    public static void PutCats(Cat cat)
+    {
+      string jsonCat = JsonConvert.SerializeObject(cat);
+      ApiHelper.PutCats(cat.CatId, jsonCat);
+    }
+
     
   }
 }
