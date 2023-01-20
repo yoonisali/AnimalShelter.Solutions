@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Dogs";
+}
+
+<h1>All Dogs:</h1>
+
+<ol>
+@foreach (Dog dog in Model)
+{
+  <li><strong>@dog.Name</strong> the @dog.Breed | <a href="/Dogs/Details/@(dog.DogId)">View Dog Details</a></li>
+}
+</ol>
