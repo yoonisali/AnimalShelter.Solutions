@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1mZzKH5RUqUwrG9ZVajzEIs6obkz6c0/tkol0oXd9T63WPxpBPgCub7qbD/rxDU0DN/9BjBA9MSEsW+og5Vviw==",
+  "success": true,
+  "projectFilePath": "/Users/yoonisali24/epicodusProjects/AnimalShelter.Solutions/AnimalShelterClient/AnimalShelterClient.csproj",
+  "expectedPackageFiles": [
+    "/Users/yoonisali24/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512",
+    "/Users/yoonisali24/.nuget/packages/restsharp/108.0.3/restsharp.108.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

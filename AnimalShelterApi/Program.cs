@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://*:8080");   
+
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AnimalShelterApiContext>(
