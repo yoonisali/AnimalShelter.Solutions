@@ -7,5 +7,6 @@
 <p>Breed: @Model.Breed</p>
 <p>Age: @Model.Age</p>
 
-<p>@Html.ActionLink("Edit details", "Edit", new { id = @Model.DogId })</p>
+<p>@Html.ActionLink("Edit dog details", "Edit", new { id = @Model.DogId })</p>
+<p>@Html.ActionLink("Remove dog from shelter", "Delete", new { id = @Model.DogId })</p>
 @Html.ActionLink("Return to all dogs", "Index")

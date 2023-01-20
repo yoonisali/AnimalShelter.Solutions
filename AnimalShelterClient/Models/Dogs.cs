@@ -46,6 +46,11 @@ namespace AnimalShelterClient.Models
       ApiHelper.PutDogs(dog.DogId, jsonDog);
     }
 
+     public static void DeleteDogs(int id)
+    {
+      ApiHelper.DeleteDogs(id);
+    }
+
     
   }
 }

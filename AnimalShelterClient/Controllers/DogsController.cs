@@ -43,4 +43,18 @@ public class DogsController : Controller
     Thread.Sleep(600);
     return RedirectToAction("Details", new { id = dog.DogId});
   }
+
+  public ActionResult Delete(int id)
+  {
+    Dog dog = Dog.GetDogDetails(id);
+    return View(dog);
+  }
+
+  [HttpPost, ActionName("Delete")]
+  public ActionResult DeleteConfirmed(int id)
+  {
+    Dog.DeleteDogs(id);
+    Thread.Sleep(600);
+    return RedirectToAction("Index");
+  }
 }

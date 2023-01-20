@@ -44,5 +44,19 @@ public class CatsController : Controller
     return RedirectToAction("Details", new { id = cat.CatId});
   }
 
+  public ActionResult Delete(int id)
+  {
+    Cat cat = Cat.GetCatDetails(id);
+    return View(cat);
+  }
+
+  [HttpPost, ActionName("Delete")]
+  public ActionResult DeleteConfirmed(int id)
+  {
+    Cat.DeleteCats(id);
+    Thread.Sleep(600);
+    return RedirectToAction("Index");
+  }
+
 
 }

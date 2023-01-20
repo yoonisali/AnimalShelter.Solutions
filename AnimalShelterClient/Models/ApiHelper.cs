@@ -73,5 +73,23 @@ namespace AnimalShelterClient.Models
       await client.PutAsync(request);
     }
 
+    public static async void DeleteDogs(int id)
+    {
+      RestClient client = new RestClient("http://localhost:5000/");
+      RestRequest request = new RestRequest($"api/dogs/{id}", Method.Delete);
+      request.AddHeader("Content-Type", "application/json");
+      await client.DeleteAsync(request);
+    }
+
+    public static async void DeleteCats(int id)
+    {
+      RestClient client = new RestClient("http://localhost:5000/");
+      RestRequest request = new RestRequest($"api/cats/{id}", Method.Delete);
+      request.AddHeader("Content-Type", "application/json");
+      await client.DeleteAsync(request);
+    }
+
+
+
   }
 }

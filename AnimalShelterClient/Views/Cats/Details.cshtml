@@ -9,5 +9,6 @@
 
 
 
-<p>@Html.ActionLink("Edit details", "Edit", new { id = @Model.CatId })</p>
+<p>@Html.ActionLink("Edit cat details", "Edit", new { id = @Model.CatId })</p>
+<p>@Html.ActionLink("Remove cat from shelter", "Delete", new { id = @Model.CatId })</p>
 @Html.ActionLink("Return to all cats", "Index")

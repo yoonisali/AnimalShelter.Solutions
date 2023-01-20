@@ -46,6 +46,11 @@ namespace AnimalShelterClient.Models
       ApiHelper.PutCats(cat.CatId, jsonCat);
     }
 
+    public static void DeleteCats(int id)
+    {
+      ApiHelper.DeleteCats(id);
+    }
+
     
   }
 }
