@@ -11,5 +11,19 @@ namespace AnimalShelterApi.Models
     public AnimalShelterApiContext(DbContextOptions<AnimalShelterApiContext> options) : base(options)
     {
     }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+      builder.Entity<Dog>()
+        .HasData(
+          new Dog { DogId = 1, Name = "Dogzilla", Breed = "Central Asian Shepherd Dog", Age = 6 },
+          new Dog { DogId = 2, Name = "King George III", Breed = "Poodle", Age = 10 }
+        );
+        builder.Entity<Cat>()
+        .HasData(
+          new Cat { CatId = 1, Name = "Kit-Kat", Age = 4, Breed = "Savannah" },
+          new Cat { CatId = 2, Name = "Simba", Age = 10, Breed = "Singapura" }
+        );
+    }
   }
 }
