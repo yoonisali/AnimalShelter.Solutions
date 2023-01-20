@@ -22,5 +22,16 @@ namespace AnimalShelterClient.Models
 
       return catList;
     }
+
+    public static Cat GetCatDetails(int id)
+    {
+      var apiCallTask = ApiHelper.GetCats(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      Cat cat = JsonConvert.DeserializeObject<Cat>(jsonResponse.ToString());
+
+      return cat;
+    }
   }
 }

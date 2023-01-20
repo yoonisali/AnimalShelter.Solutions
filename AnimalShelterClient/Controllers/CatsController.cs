@@ -10,4 +10,12 @@ public class CatsController : Controller
     List<Cat> cats = Cat.GetCats();
     return View(cats);
   }
+
+  public IActionResult Details(int id)
+  {
+    Cat cat = Cat.GetCatDetails(id);
+    return View(cat);
+  }
+
+  
 }

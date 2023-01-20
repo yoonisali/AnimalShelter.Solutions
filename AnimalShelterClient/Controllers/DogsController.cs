@@ -10,4 +10,10 @@ public class DogsController : Controller
     List<Dog> dogs = Dog.GetDogs();
     return View(dogs);
   }
+
+  public IActionResult Details(int id)
+  {
+    Dog dog = Dog.GetDogDetails(id);
+    return View(dog);
+  }
 }
