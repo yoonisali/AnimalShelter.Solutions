@@ -3,7 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// builder.WebHost.UseUrls("http://*:8080");   
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+  options.AddPolicy(name: MyAllowSpecificOrigins,
+                    policy =>
+                    {
+                      policy.WithOrigins("http://localhost:5000",
+                                            "http://www.example.com");
+                    });
+});
 
 builder.Services.AddControllers();
 
@@ -31,6 +41,9 @@ else
 {
   app.UseHttpsRedirection();
 }
+
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 
