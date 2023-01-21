@@ -25,7 +25,7 @@ _An animal shelter web api application that allows the user to Create, Read, Upd
 
 * _Fill in `appsettings.json` with the following code:_
 ```
-`{
+{
   "Logging": {
     "LogLevel": {
       "Default": "Information",
@@ -36,11 +36,11 @@ _An animal shelter web api application that allows the user to Create, Read, Upd
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;database=[DB-NAME-HERE];uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
     }
-}`
+}
 ```
 * _Fill in `appsettings.Development.json` with the following code:_
 ```
-`{
+{
   "Logging": {
     "LogLevel": {
       "Default": "Information",
@@ -49,7 +49,7 @@ _An animal shelter web api application that allows the user to Create, Read, Upd
       "Microsoft.Hosting.Lifetime": "Information"
     }
   }
-}`
+}
 ```
 
 * _Run `dotnet ef migrations add Initial` inside of the AnimalShelterApi directory._
@@ -66,11 +66,11 @@ _Base URL: https://localhost:5000_
 
 ### _HTTP Request Structure_
 ```
-`GET /api/{component}
+GET /api/{component}
 PUT /api/{component}
 DELETE /api/{component}/{id}
 GET /api/{component}/{id}
-POST /api/{component}/{id}`
+POST /api/{component}/{id}
 ```
 ### _Example Query_
 
@@ -78,12 +78,12 @@ _`https://localhost:5001/api/Dogs/1`_
 
 ### _Sample JSON Response_
 ```
-`{
+{
   "dogId": 1,
   "name": "Dogzilla",
   "breed": "Central Asian Shepherd Dog",
   "age": 6
-}`
+}
 ```
 ### _Example Query_
 
@@ -91,12 +91,12 @@ _`https://localhost:5001/api/Cats/1`_
 
 ### _Sample JSON Response_
 ```
-`{
+{
   "catId": 1,
   "name": "Kit-Kat",
   "breed": "Savannah",
   "age": 4
-}`
+}
 ```
 
 
